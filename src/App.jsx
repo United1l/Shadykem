@@ -11,17 +11,24 @@ const navItems = [
 
 function App() {
   return (
-    <div className="app-shell">
-      <header className="site-nav">
-        <div className="brand">ShadyKem</div>
-        <nav>
+    <div className="relative min-h-screen overflow-hidden bg-[#050a08]/20">
+      <div className="absolute inset-0 -z-10 bg-[#050a08]/60" />
+
+      <header className="sticky top-0 z-50 flex items-center justify-between gap-6 bg-[#0c100d]/80 border-b border-[#d4b86f]/20 px-8 py-6 backdrop-blur-sm">
+        <div className="text-emerald text-[1.55rem] font-bold tracking-[0.08em]">
+          ShadyKem
+        </div>
+
+        <nav className="flex gap-10">
           {navItems.map((item) => (
             <NavLink
               key={item.label}
               to={item.path}
               end={item.end}
               className={({ isActive }) =>
-                isActive ? 'nav-link active' : 'nav-link'
+                `text-[#f2d070] text-sm font-semibold tracking-[0.12em] uppercase transition-colors ${
+                  isActive ? 'text-[#ffe49d]' : ''
+                }`
               }
             >
               {item.label}
@@ -30,7 +37,7 @@ function App() {
         </nav>
       </header>
 
-      <main className="page-content">
+      <main className="relative z-10 px-8 py-8">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/collections" element={<Collections />} />

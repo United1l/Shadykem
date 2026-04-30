@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html,
+  body,
+  #root {
+    min-height: 100vh;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    background: radial-gradient(circle at top, rgba(212, 184, 111, 0.1), transparent 35%),
+      linear-gradient(180deg, #050a08 0%, #0c120f 100%);
+  }
+}
