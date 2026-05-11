@@ -1,4 +1,4 @@
-import { NavLink, Routes, Route } from 'react-router-dom'
+import { NavLink, Routes, Route, useLocation } from 'react-router-dom'
 import Home from './pages/Home.jsx'
 import Collections from './pages/Collections.jsx'
 import About from './pages/About.jsx'
@@ -10,13 +10,15 @@ const navItems = [
 ]
 
 function App() {
+  const location = useLocation()
+
   return (
-    <div className="relative min-h-screen overflow-hidden bg-[#050a08]/20">
-      <div className="absolute inset-0 -z-10 bg-[#050a08]/60" />
+    <div className="relative min-h-screen bg-[#050a08]/20">
+      <div className={`absolute inset-0 -z-10 ${location.pathname === '/' ? 'bg-[url(/images/bg2.jpg)] bg-cover' : 'bg-[#050a08]/60'}`} />
 
       <header className="sticky top-0 z-50 flex items-center justify-between gap-6 bg-[#0c100d]/80 border-b border-[#d4b86f]/20 px-8 py-6 backdrop-blur-sm">
         <div className="text-emerald text-[1.55rem] font-bold tracking-[0.08em]">
-          ShadyKem
+          Shaddykem
         </div>
 
         <nav className="flex gap-10">

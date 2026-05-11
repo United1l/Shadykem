@@ -1,13 +1,18 @@
+import Button from '../components/button.jsx'
+
 function About() {
   return (
     <section className="max-w-6xl mx-auto space-y-10">
       <div className="space-y-4">
-        <h1 className="text-[2.5rem] font-bold text-[#eddab0]">About ShadyKem</h1>
+        <h1 className="text-[2.5rem] font-bold text-[#eddab0]">About Shaddykem</h1>
         <p className="max-w-3xl text-white/85 leading-8">
-          ShadyKem is a fashion designer dedicated to luxurious, modern pieces
+          Shaddykem is a fashion designer dedicated to luxurious, modern pieces
           with a strong point of view. Each creation combines polished tailoring
           with dramatic color and artisan craftsmanship.
         </p>
+        <div>
+          <Button>Book a Consultation</Button>
+        </div>
       </div>
 
       <div className="grid gap-7 md:grid-cols-2">

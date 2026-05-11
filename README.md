@@ -1,4 +1,4 @@
-# Shadykem
+# Shaddykem
 A fashion design and modeling agency
 
 ## Development
