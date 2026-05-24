@@ -13,7 +13,7 @@ function App() {
   const location = useLocation()
 
   return (
-    <div className="relative min-h-screen bg-[#050a08]/20">
+    <div className="relative min-h-screen overflow-x-hidden bg-[#050a08]/20">
       <div className="absolute inset-0 -z-10 bg-[#050a08]/20" />
 
       <header className="sticky top-0 z-50 flex flex-wrap items-center justify-between gap-4 bg-[#0c100d]/80 border-b border-[#d4b86f]/20 px-4 py-5 sm:px-8 sm:py-6 backdrop-blur-sm">
