@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import Button from '../components/button.jsx'
+import Button from './button.jsx'
 import { ArrowUpRight } from 'lucide-react'
 
 function HeroSection() {
