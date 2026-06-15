@@ -1,5 +1,5 @@
 # Shaddykem
-A fashion design and modeling agency
+A website for fashion designer and his modeling agency
 
 ## Development
 
