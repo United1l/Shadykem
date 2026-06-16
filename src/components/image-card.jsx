@@ -1,4 +1,4 @@
-function ImageCard({ children, className = '', ...props }) {
+const ImageCard = ({ children, className = '', ...props }) => {
     return (
         <div className={`${className} rounded-lg`}
             {...props}

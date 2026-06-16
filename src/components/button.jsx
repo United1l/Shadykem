@@ -1,4 +1,4 @@
-function Button({ children, type = 'button', className = '', onClick, disabled = false, ...props }) {
+const Button = ({ children, type = 'button', className = '', onClick, disabled = false, ...props }) => {
   return (
     <button
       type={type}
