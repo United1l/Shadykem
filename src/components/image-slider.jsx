@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const ImageSlider = ({ images, width = '600px', height = '400px' }) => {
+const ImageSlider = ({ images, width = '500px', height = '500px' }) => {
     const [currentIndex, setCurrentIndex] = useState(0)
 
     useEffect(() => {
@@ -8,7 +8,7 @@ const ImageSlider = ({ images, width = '600px', height = '400px' }) => {
 
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 1000);
+        }, 3000);
 
         return () => clearInterval(interval);
     }, [images]);
@@ -19,7 +19,7 @@ const ImageSlider = ({ images, width = '600px', height = '400px' }) => {
         <div className="slider-container relative rounded-md overflow-hidden"
          style={{ width, height }}>
             <div
-                className="slider-track flex h-full transition duration-500 ease-in-out"
+                className="slider-track flex h-full transition duration-500 ease-in-out will-change-transform"
                 style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
                 {images.map((src, index) => (
