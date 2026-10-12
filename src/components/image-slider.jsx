@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const ImageSlider = ({ images, width = '500px', height = '500px' }) => {
+const ImageSlider = ({ images, width = '100%', height = '420px' }) => {
     const [currentIndex, setCurrentIndex] = useState(0)
 
     useEffect(() => {
@@ -13,11 +13,11 @@ const ImageSlider = ({ images, width = '500px', height = '500px' }) => {
         return () => clearInterval(interval);
     }, [images]);
 
-
-
     return (
-        <div className="slider-container relative rounded-md overflow-hidden"
-         style={{ width, height }}>
+        <div
+            className="slider-container relative overflow-hidden rounded-[24px] border border-[#d4b86f]/20 bg-[#101611] shadow-soft"
+            style={{ width, height }}
+        >
             <div
                 className="slider-track flex h-full transition duration-500 ease-in-out will-change-transform"
                 style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -27,7 +27,7 @@ const ImageSlider = ({ images, width = '500px', height = '500px' }) => {
                         key={index}
                         src={src}
                         alt={`Slide ${index + 1}`}
-                        className="slider-image min-w-full h-full object-cover shrink-0"
+                        className="slider-image h-full min-w-full shrink-0 bg-[#101611] object-contain"
                     />
                 ))}
             </div>

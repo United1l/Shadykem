@@ -8,26 +8,26 @@ const FeaturedCollectionHero2 = ({
     const navigate = useNavigate()
 
     return (
-        <section className="h-fit w-full relative mt-4 md:mt-6">
-            <div className="h-full w-full">
+        <section className="mx-auto w-full max-w-7xl px-4 py-12 md:px-6">
+            <div className="relative overflow-hidden rounded-[28px] border border-[#d4b86f]/20 bg-[#101611] shadow-soft">
                 <img
-                    className="h-full w-full"
+                    className="h-[430px] w-full bg-[#101611] object-contain md:h-[520px]"
                     src={imageUrl}
                     alt={imageAlt}
                 />
-            </div>
-            <div className="absolute left-[50%] top-[95%] -translate-x-1/2 -translate-y-1/2
-             flex flex-col items-center justify-center gap-4">
-                <h3 className="text-lg md:text-4xl text-emerald text-center mb-2">
-                    Atomic Detail
-                </h3>
-                <button className="text-lg md:text-2xl font-bold underline 
-                text-emerald hover:text-green-400 transition-colors"
-                    type="button"
-                    onClick={() => navigate('/collections')}
-                >
-                    {buttonLabel}
-                </button>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#050a08]/90 via-[#050a08]/20 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 flex flex-col items-center justify-center gap-3 pb-8 text-center">
+                    <h3 className="text-lg text-emerald md:text-4xl">
+                        Atomic Detail
+                    </h3>
+                    <button
+                        className="text-lg font-bold underline text-emerald transition-colors hover:text-green-400 md:text-2xl"
+                        type="button"
+                        onClick={() => navigate('/collections')}
+                    >
+                        {buttonLabel}
+                    </button>
+                </div>
             </div>
         </section>
     );
